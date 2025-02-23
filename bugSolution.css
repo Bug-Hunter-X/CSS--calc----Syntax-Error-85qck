@@ -1,0 +1,33 @@
+/* Incorrect usage of calc() */
+.element {
+  width: calc(100% - 10px);
+  /* Missing unit for 10, should be 10px or 10% */
+}
+
+/* Correct usage of calc() */
+.element {
+  width: calc(100% - 10px);
+  /* Correct syntax with proper units */
+}
+
+/* Another common error: */
+.anotherElement {
+  width: calc(50% + 50%);
+  /* Result is 100% which might be unexpected */
+}
+
+/* Solution: */
+.anotherElement {
+  width: calc(50% + 50%); /* Still correct but might need different logic */
+  /* Use a more precise calculation if necessary */
+}
+
+/* Incorrect spacing and missing parentheses */
+.yetAnotherElement{
+  height: calc( 20px+ 10px );
+}
+
+/* Correct version */
+.yetAnotherElement {
+  height: calc(20px + 10px);
+}
